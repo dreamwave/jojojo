@@ -70,9 +70,47 @@
     return cell;
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section
+- (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
-    return @"Här uppe ska det stå lite grejs";
+	// create the parent view that will hold header Label
+	UIView* customView = [[UIView alloc] initWithFrame:CGRectMake(10.0, 0.0, 300.0, 44.0)];
+	
+	UILabel * headerLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+	headerLabel.backgroundColor = [UIColor clearColor];
+	headerLabel.opaque = NO;
+	headerLabel.textColor = [UIColor grayColor];
+	headerLabel.highlightedTextColor = [UIColor whiteColor];
+	headerLabel.font = [UIFont boldSystemFontOfSize:12];
+	headerLabel.frame = CGRectMake(60.0, 0.0, 300.0, 26.0); //Hårdkodad centrering = bad
+	headerLabel.text = @"Senast uppdaterad 2012-04-21 13:37"; //Todo: läsa in datan på riktigt
+	[customView addSubview:headerLabel];
+    
+    UILabel * headerLeftSubLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+	headerLeftSubLabel.backgroundColor = [UIColor grayColor];
+	headerLeftSubLabel.opaque = NO;
+	headerLeftSubLabel.textColor = [UIColor whiteColor];
+	headerLeftSubLabel.highlightedTextColor = [UIColor whiteColor];
+	headerLeftSubLabel.font = [UIFont boldSystemFontOfSize:10];
+	headerLeftSubLabel.frame = CGRectMake(10.0, 20.0, 145.0, 18.0); //Hårdkodad centrering = bad
+	headerLeftSubLabel.text = @"Till: Spanien - Gran Canaria"; //Todo: läsa in datan på riktigt
+	[customView addSubview:headerLeftSubLabel];
+    
+    UILabel * headerRightSubLabel = [[UILabel alloc] initWithFrame:CGRectZero];
+	headerRightSubLabel.backgroundColor = [UIColor grayColor];
+	headerRightSubLabel.opaque = NO;
+	headerRightSubLabel.textColor = [UIColor whiteColor];
+	headerRightSubLabel.highlightedTextColor = [UIColor whiteColor];
+	headerRightSubLabel.font = [UIFont boldSystemFontOfSize:10];
+	headerRightSubLabel.frame = CGRectMake(165.0, 20.0, 145.0, 18.0); //Hårdkodad centrering = bad
+	headerRightSubLabel.text = @"Från: Sverige - Stockholm"; //Todo: läsa in datan på riktigt
+	[customView addSubview:headerRightSubLabel];
+    
+	return customView;
+}
+
+- (CGFloat) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
+{
+	return 44.0;
 }
 
 /*
