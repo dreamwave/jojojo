@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9441CE16171C4E38006214DC /* JOTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9441CE15171C4E38006214DC /* JOTableViewController.m */; };
 		E1EE4B1F171C3F170059BEDD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1EE4B1E171C3F170059BEDD /* UIKit.framework */; };
 		E1EE4B21171C3F170059BEDD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1EE4B20171C3F170059BEDD /* Foundation.framework */; };
 		E1EE4B23171C3F170059BEDD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1EE4B22171C3F170059BEDD /* CoreGraphics.framework */; };
@@ -22,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9441CE14171C4E38006214DC /* JOTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JOTableViewController.h; sourceTree = "<group>"; };
+		9441CE15171C4E38006214DC /* JOTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JOTableViewController.m; sourceTree = "<group>"; };
 		E1EE4B1B171C3F170059BEDD /* JoJoJoTravels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JoJoJoTravels.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1EE4B1E171C3F170059BEDD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E1EE4B20171C3F170059BEDD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -92,6 +95,8 @@
 				E1EE4B3C171C3F170059BEDD /* JOViewController.h */,
 				E1EE4B3D171C3F170059BEDD /* JOViewController.m */,
 				E1EE4B25171C3F170059BEDD /* Supporting Files */,
+				9441CE14171C4E38006214DC /* JOTableViewController.h */,
+				9441CE15171C4E38006214DC /* JOTableViewController.m */,
 			);
 			path = JoJoJoTravels;
 			sourceTree = "<group>";
@@ -181,6 +186,7 @@
 				E1EE4B2B171C3F170059BEDD /* main.m in Sources */,
 				E1EE4B2F171C3F170059BEDD /* JOAppDelegate.m in Sources */,
 				E1EE4B3E171C3F170059BEDD /* JOViewController.m in Sources */,
+				9441CE16171C4E38006214DC /* JOTableViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -313,6 +319,7 @@
 				E1EE4B43171C3F170059BEDD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
