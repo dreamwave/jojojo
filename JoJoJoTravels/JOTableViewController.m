@@ -97,6 +97,7 @@
     {
         cell.oneRemaining.hidden = false;
         cell.alert.hidden = false;
+        cell.oneRemaining.transform = CGAffineTransformMakeRotation (3.14/4);
     }
     
     cell.destination.text = [self.destinationArray objectAtIndex:indexPath.row];
