@@ -100,7 +100,7 @@
             [tmpArr addObject:item];
         }
         self.itemsArray = tmpArr;
-     
+        [self.tableView reloadData];
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
         NSLog(@"Failure ALL!");
     }];
@@ -117,7 +117,7 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return 3; //This need to be read in a smart way
+    return [self.itemsArray count]; //This need to be read in a smart way
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
