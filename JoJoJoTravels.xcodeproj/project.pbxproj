@@ -39,6 +39,9 @@
 		E1EE4C38171D6AD90059BEDD /* AFURLConnectionOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EE4C2D171D6AD90059BEDD /* AFURLConnectionOperation.m */; };
 		E1EE4C39171D6AD90059BEDD /* AFXMLRequestOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EE4C2F171D6AD90059BEDD /* AFXMLRequestOperation.m */; };
 		E1EE4C3A171D6AD90059BEDD /* UIImageView+AFNetworking.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EE4C31171D6AD90059BEDD /* UIImageView+AFNetworking.m */; };
+		E1EE4C3E171D77410059BEDD /* JOLastMinuteAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EE4C3D171D77410059BEDD /* JOLastMinuteAPIClient.m */; };
+		E1EE4C40171D777C0059BEDD /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1EE4C3F171D777B0059BEDD /* MobileCoreServices.framework */; };
+		E1EE4C43171D78010059BEDD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1EE4C41171D77810059BEDD /* SystemConfiguration.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -91,6 +94,10 @@
 		E1EE4C2F171D6AD90059BEDD /* AFXMLRequestOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFXMLRequestOperation.m; sourceTree = "<group>"; };
 		E1EE4C30171D6AD90059BEDD /* UIImageView+AFNetworking.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+AFNetworking.h"; sourceTree = "<group>"; };
 		E1EE4C31171D6AD90059BEDD /* UIImageView+AFNetworking.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+AFNetworking.m"; sourceTree = "<group>"; };
+		E1EE4C3C171D77410059BEDD /* JOLastMinuteAPIClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JOLastMinuteAPIClient.h; sourceTree = "<group>"; };
+		E1EE4C3D171D77410059BEDD /* JOLastMinuteAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JOLastMinuteAPIClient.m; sourceTree = "<group>"; };
+		E1EE4C3F171D777B0059BEDD /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		E1EE4C41171D77810059BEDD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,6 +105,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E1EE4C43171D78010059BEDD /* SystemConfiguration.framework in Frameworks */,
+				E1EE4C40171D777C0059BEDD /* MobileCoreServices.framework in Frameworks */,
 				E1EE4B1F171C3F170059BEDD /* UIKit.framework in Frameworks */,
 				E1EE4B21171C3F170059BEDD /* Foundation.framework in Frameworks */,
 				E1EE4B23171C3F170059BEDD /* CoreGraphics.framework in Frameworks */,
@@ -127,6 +136,8 @@
 		E1EE4B1D171C3F170059BEDD /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				E1EE4C41171D77810059BEDD /* SystemConfiguration.framework */,
+				E1EE4C3F171D777B0059BEDD /* MobileCoreServices.framework */,
 				E1EE4B1E171C3F170059BEDD /* UIKit.framework */,
 				E1EE4B20171C3F170059BEDD /* Foundation.framework */,
 				E1EE4B22171C3F170059BEDD /* CoreGraphics.framework */,
@@ -206,6 +217,8 @@
 		E1EE4C3B171D6B400059BEDD /* Communication */ = {
 			isa = PBXGroup;
 			children = (
+				E1EE4C3C171D77410059BEDD /* JOLastMinuteAPIClient.h */,
+				E1EE4C3D171D77410059BEDD /* JOLastMinuteAPIClient.m */,
 			);
 			name = Communication;
 			sourceTree = "<group>";
@@ -301,6 +314,7 @@
 				E1EE4C38171D6AD90059BEDD /* AFURLConnectionOperation.m in Sources */,
 				E1EE4C39171D6AD90059BEDD /* AFXMLRequestOperation.m in Sources */,
 				E1EE4C3A171D6AD90059BEDD /* UIImageView+AFNetworking.m in Sources */,
+				E1EE4C3E171D77410059BEDD /* JOLastMinuteAPIClient.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
