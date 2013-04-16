@@ -27,10 +27,11 @@
         NSLog(@"Failure!");
     }];
     
-    [[JOLastMinuteAPIClient sharedClient] getPath:@"/airports   " parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    [[JOLastMinuteAPIClient sharedClient] getPath:@"/airports" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSMutableArray *tmpArray = [[NSMutableArray alloc]init];
         
         for (NSDictionary *dict in responseObject) {
+            NSLog(@"%@ -> %@", [dict valueForKey:@"code"], [dict valueForKey:@"name"]);
             [tmpArray addObject:[dict valueForKey:@"name"]];
         }
         
