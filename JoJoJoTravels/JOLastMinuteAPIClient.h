@@ -10,5 +10,5 @@
 #import "AFNetworking.h"
 
 @interface JOLastMinuteAPIClient : AFHTTPClient
-
++ (JOLastMinuteAPIClient *)sharedClient;
 @end

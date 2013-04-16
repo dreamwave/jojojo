@@ -11,20 +11,20 @@
 #import "OurTableCell.h"
 
 @interface JOTableViewController ()
-
+    @property (nonatomic, strong) NSArray *destinationArray;
+    @property (nonatomic, strong) NSArray *detailArray;
+    @property (nonatomic, strong) NSArray *monthArray;
+    @property (nonatomic, strong) NSArray *dayArray;
+    @property (nonatomic, strong) NSArray *durationArray;
+    @property (nonatomic, strong) NSArray *nrRemainingArray;
+    @property (nonatomic, strong) NSArray *originArray;
+    @property (nonatomic, strong) NSArray *deptTimeArray;
+    @property (nonatomic, strong) NSArray *priceArray;
 @end
 
 @implementation JOTableViewController
 {
-    NSArray *destinationArray;
-    NSArray *detailArray;
-    NSArray *monthArray;
-    NSArray *dayArray;
-    NSArray *durationArray;
-    NSArray *nrRemainingArray;
-    NSArray *originArray;
-    NSArray *deptTimeArray;
-    NSArray *priceArray;
+    
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -42,16 +42,16 @@
     
     //Todo: Populate the arrays from the API
     
-    destinationArray = [NSArray arrayWithObjects:@"Turkiet/Dalaman", @"Turkiet", @"Mallorca", nil];
-    detailArray = [NSArray arrayWithObjects:@"Endast flyg", @"Ospecifierat boende", @"Endast flyg", nil];
-    monthArray = [NSArray arrayWithObjects:@"Okt", @"Okt", @"Okt", nil];
-    dayArray = [NSArray arrayWithObjects:[NSNumber numberWithInt:12],[NSNumber numberWithInt:12],[NSNumber numberWithInt:13], nil];
-    durationArray = [NSArray arrayWithObjects:@"1 vecka", @"1 vecka", @"1 vecka", nil];
-    nrRemainingArray = [NSArray arrayWithObjects:[NSNumber numberWithInt:1],[NSNumber numberWithInt:1],[NSNumber numberWithInt:5], nil];
-    originArray = [NSArray arrayWithObjects:@"Köpenhamn",@"Köpenhamn",@"Göteborg", nil];
-    deptTimeArray = [NSArray arrayWithObjects:@"17:00",@"17:00",@"06:30", nil];
-    priceArray = [NSArray arrayWithObjects:[NSNumber numberWithInt:3298],[NSNumber numberWithInt:3698],[NSNumber numberWithInt:2998], nil];
-
+    self.destinationArray = [NSArray arrayWithObjects:@"Turkiet/Dalaman", @"Turkiet", @"Mallorca", nil];
+    self.detailArray = [NSArray arrayWithObjects:@"Endast flyg", @"Ospecifierat boende", @"Endast flyg", nil];
+    self.monthArray = [NSArray arrayWithObjects:@"Okt", @"Okt", @"Okt", nil];
+    self.dayArray = [NSArray arrayWithObjects:[NSNumber numberWithInt:12],[NSNumber numberWithInt:12],[NSNumber numberWithInt:13], nil];
+    self.durationArray = [NSArray arrayWithObjects:@"1 vecka", @"1 vecka", @"1 vecka", nil];
+    self.nrRemainingArray = [NSArray arrayWithObjects:[NSNumber numberWithInt:1],[NSNumber numberWithInt:1],[NSNumber numberWithInt:5], nil];
+    self.originArray = [NSArray arrayWithObjects:@"Köpenhamn",@"Köpenhamn",@"Göteborg", nil];
+    self.deptTimeArray = [NSArray arrayWithObjects:@"17:00",@"17:00",@"06:30", nil];
+    self.priceArray = [NSArray arrayWithObjects:[NSNumber numberWithInt:3298],[NSNumber numberWithInt:3698],[NSNumber numberWithInt:2998], nil];
+    
     JOViewController *searchView = [self.storyboard instantiateViewControllerWithIdentifier:@"JOViewController"];
     searchView.view.frame = CGRectMake(0, -330, self.navigationController.view.frame.size.width, 64);
     [self.navigationController.view insertSubview:searchView.view atIndex:2];
@@ -92,8 +92,8 @@
         cell = [nib objectAtIndex:0];
     }
     
-    cell.destination.text = [destinationArray objectAtIndex:indexPath.row];
-    cell.details.text = [detailArray objectAtIndex:indexPath.row];
+    cell.destination.text = [self.destinationArray objectAtIndex:indexPath.row];
+    cell.details.text = [self.detailArray objectAtIndex:indexPath.row];
     
     return cell;
 }

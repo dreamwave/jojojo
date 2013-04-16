@@ -8,15 +8,40 @@
 
 #import "JOViewController.h"
 
-@interface JOViewController ()
+#import "JOLastMinuteAPIClient.h"
 
+@interface JOViewController ()
+    @property (nonatomic, strong) NSArray *destinationArray;
+    @property (nonatomic, strong) NSArray *originArray;
 @end
 
 @implementation JOViewController
 
 - (void)viewDidLoad
 {
-    	// Do any additional setup after loading the view, typically from a nib.
+    [[JOLastMinuteAPIClient sharedClient] getPath:@"/destinations" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        self.destinationArray = responseObject;
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Failure!");
+    }];
+    
+    [[JOLastMinuteAPIClient sharedClient] getPath:@"/airports   " parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSMutableArray *tmpArray = [[NSMutableArray alloc]init];
+        
+        for (NSDictionary *dict in responseObject) {
+            [tmpArray addObject:[dict valueForKey:@"name"]];
+        }
+        
+        self.originArray = tmpArray;
+        
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Failure!");
+    }];
+    
+    
+    // Do any additional setup after loading the view, typically from a nib.
     UIImage *background = [UIImage imageNamed: @"towel.png"];
     UIImageView *imageView = [[UIImageView alloc] initWithImage: background];
     
