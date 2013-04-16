@@ -92,8 +92,21 @@
         cell = [nib objectAtIndex:0];
     }
     
+    
+    if([self.nrRemainingArray objectAtIndex:indexPath.row] == [NSNumber numberWithInt:1])
+    {
+        cell.oneRemaining.hidden = false;
+        cell.alert.hidden = false;
+    }
+    
     cell.destination.text = [self.destinationArray objectAtIndex:indexPath.row];
     cell.details.text = [self.detailArray objectAtIndex:indexPath.row];
+    cell.month.text = [self.monthArray objectAtIndex:indexPath.row];
+    cell.date.text = [NSString stringWithFormat:@"%@",[self.dayArray objectAtIndex:indexPath.row]];
+    cell.duration.text = [self.durationArray objectAtIndex:indexPath.row];
+    cell.origin.text = [self.originArray objectAtIndex:indexPath.row];
+    cell.deptTime.text = [self.deptTimeArray objectAtIndex:indexPath.row];
+    cell.price.text = [NSString stringWithFormat:@"%@:-",[self.priceArray objectAtIndex:indexPath.row]];
     
     return cell;
 }
@@ -146,7 +159,7 @@
 
 - (CGFloat) tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
 {
-	return 44.0;
+	return 28.0;
 }
 
 /*
