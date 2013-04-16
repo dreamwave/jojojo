@@ -10,6 +10,8 @@
 		9433D0BB171C5D3A00ACC705 /* OurTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9433D0BA171C5D3A00ACC705 /* OurTableCell.xib */; };
 		9433D0C4171C615800ACC705 /* OurTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9433D0C3171C615800ACC705 /* OurTableCell.m */; };
 		9441CE16171C4E38006214DC /* JOTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9441CE15171C4E38006214DC /* JOTableViewController.m */; };
+		9480BE5B171D6B6D00A50901 /* icon_gray_flight.png in Resources */ = {isa = PBXBuildFile; fileRef = 9480BE5A171D6B6D00A50901 /* icon_gray_flight.png */; };
+		9480BE5D171D6B7B00A50901 /* icon_gray_time.png in Resources */ = {isa = PBXBuildFile; fileRef = 9480BE5C171D6B7B00A50901 /* icon_gray_time.png */; };
 		E1EE4B1F171C3F170059BEDD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1EE4B1E171C3F170059BEDD /* UIKit.framework */; };
 		E1EE4B21171C3F170059BEDD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1EE4B20171C3F170059BEDD /* Foundation.framework */; };
 		E1EE4B23171C3F170059BEDD /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1EE4B22171C3F170059BEDD /* CoreGraphics.framework */; };
@@ -50,6 +52,8 @@
 		9433D0C3171C615800ACC705 /* OurTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OurTableCell.m; sourceTree = "<group>"; };
 		9441CE14171C4E38006214DC /* JOTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JOTableViewController.h; sourceTree = "<group>"; };
 		9441CE15171C4E38006214DC /* JOTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JOTableViewController.m; sourceTree = "<group>"; };
+		9480BE5A171D6B6D00A50901 /* icon_gray_flight.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_gray_flight.png; path = ../../../../Downloads/Images/icon_gray_flight.png; sourceTree = "<group>"; };
+		9480BE5C171D6B7B00A50901 /* icon_gray_time.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = icon_gray_time.png; path = ../../../../Downloads/Images/icon_gray_time.png; sourceTree = "<group>"; };
 		E1EE4B1B171C3F170059BEDD /* JoJoJoTravels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JoJoJoTravels.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1EE4B1E171C3F170059BEDD /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		E1EE4B20171C3F170059BEDD /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -183,6 +187,8 @@
 				E1EE4B2C171C3F170059BEDD /* JoJoJoTravels-Prefix.pch */,
 				E1EE4B30171C3F170059BEDD /* Default.png */,
 				E1EE4B32171C3F170059BEDD /* Default@2x.png */,
+				9480BE5C171D6B7B00A50901 /* icon_gray_time.png */,
+				9480BE5A171D6B6D00A50901 /* icon_gray_flight.png */,
 				E1EE4B34171C3F170059BEDD /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
@@ -285,8 +291,8 @@
 				E1EE4C14171D65A20059BEDD /* alert.png in Resources */,
 				E1EE4C15171D65A20059BEDD /* alert@2x.png in Resources */,
 				E1EE4C16171D65A20059BEDD /* blue_arrow.png in Resources */,
-				E1EE4C17171D65A20059BEDD /* blue_arrow@2x.png in Resources */,
-				E1EE4C18171D65A20059BEDD /* calendar.png in Resources */,
+				9480BE5B171D6B6D00A50901 /* icon_gray_flight.png in Resources */,
+				9480BE5D171D6B7B00A50901 /* icon_gray_time.png in Resources */,
 				E1EE4C19171D65A20059BEDD /* calendar@2x.png in Resources */,
 				E1EE4C1C171D66C80059BEDD /* towel.png in Resources */,
 				E1EE4C1D171D66C80059BEDD /* towel@2x.png in Resources */,

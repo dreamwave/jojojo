@@ -16,8 +16,15 @@
 
 @implementation JOTableViewController
 {
-    NSArray *destinations;
-    NSArray *details;
+    NSArray *destinationArray;
+    NSArray *detailArray;
+    NSArray *monthArray;
+    NSArray *dayArray;
+    NSArray *durationArray;
+    NSArray *nrRemainingArray;
+    NSArray *originArray;
+    NSArray *deptTimeArray;
+    NSArray *priceArray;
 }
 
 - (id)initWithStyle:(UITableViewStyle)style
@@ -33,8 +40,17 @@
 {
     [super viewDidLoad];
     
-    destinations = [NSArray arrayWithObjects:@"Stockholm/Arlanda", @"Mallorca", @"Malaga", nil];
-    details = [NSArray arrayWithObjects:@"Sverige", @"Spanien", @"Spanien", nil];
+    //Todo: Populate the arrays from the API
+    
+    destinationArray = [NSArray arrayWithObjects:@"Turkiet/Dalaman", @"Turkiet", @"Mallorca", nil];
+    detailArray = [NSArray arrayWithObjects:@"Endast flyg", @"Ospecifierat boende", @"Endast flyg", nil];
+    monthArray = [NSArray arrayWithObjects:@"Okt", @"Okt", @"Okt", nil];
+    dayArray = [NSArray arrayWithObjects:[NSNumber numberWithInt:12],[NSNumber numberWithInt:12],[NSNumber numberWithInt:13], nil];
+    durationArray = [NSArray arrayWithObjects:@"1 vecka", @"1 vecka", @"1 vecka", nil];
+    nrRemainingArray = [NSArray arrayWithObjects:[NSNumber numberWithInt:1],[NSNumber numberWithInt:1],[NSNumber numberWithInt:5], nil];
+    originArray = [NSArray arrayWithObjects:@"Köpenhamn",@"Köpenhamn",@"Göteborg", nil];
+    deptTimeArray = [NSArray arrayWithObjects:@"17:00",@"17:00",@"06:30", nil];
+    priceArray = [NSArray arrayWithObjects:[NSNumber numberWithInt:3298],[NSNumber numberWithInt:3698],[NSNumber numberWithInt:2998], nil];
 
     JOViewController *searchView = [self.storyboard instantiateViewControllerWithIdentifier:@"JOViewController"];
     searchView.view.frame = CGRectMake(0, -330, self.navigationController.view.frame.size.width, 64);
@@ -64,13 +80,11 @@
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     // Return the number of rows in the section.
-    return section == 0 ? 3 : 0;
+    return 3; //This need to be read in a smart way
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    static NSString *CellIdentifier = @"Cell";
-    
     OurTableCell *cell = nil;
     if (cell == nil)
     {
@@ -78,16 +92,15 @@
         cell = [nib objectAtIndex:0];
     }
     
-    
-    cell.destination.text = [destinations objectAtIndex:indexPath.row];
-    cell.details.text = [details objectAtIndex:indexPath.row];
+    cell.destination.text = [destinationArray objectAtIndex:indexPath.row];
+    cell.details.text = [detailArray objectAtIndex:indexPath.row];
     
     return cell;
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    return 78;
+    return 80;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
