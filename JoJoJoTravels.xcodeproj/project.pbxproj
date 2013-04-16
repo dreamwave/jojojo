@@ -56,6 +56,7 @@
 		E1EE4C3E171D77410059BEDD /* JOLastMinuteAPIClient.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EE4C3D171D77410059BEDD /* JOLastMinuteAPIClient.m */; };
 		E1EE4C40171D777C0059BEDD /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1EE4C3F171D777B0059BEDD /* MobileCoreServices.framework */; };
 		E1EE4C43171D78010059BEDD /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1EE4C41171D77810059BEDD /* SystemConfiguration.framework */; };
+		E1EE4C46171D87F80059BEDD /* JOTravelItem.m in Sources */ = {isa = PBXBuildFile; fileRef = E1EE4C45171D87F80059BEDD /* JOTravelItem.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -128,6 +129,8 @@
 		E1EE4C3D171D77410059BEDD /* JOLastMinuteAPIClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JOLastMinuteAPIClient.m; sourceTree = "<group>"; };
 		E1EE4C3F171D777B0059BEDD /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
 		E1EE4C41171D77810059BEDD /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		E1EE4C44171D87F80059BEDD /* JOTravelItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JOTravelItem.h; sourceTree = "<group>"; };
+		E1EE4C45171D87F80059BEDD /* JOTravelItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JOTravelItem.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -223,6 +226,8 @@
 				9433D0BA171C5D3A00ACC705 /* OurTableCell.xib */,
 				9433D0C2171C615800ACC705 /* OurTableCell.h */,
 				9433D0C3171C615800ACC705 /* OurTableCell.m */,
+				E1EE4C44171D87F80059BEDD /* JOTravelItem.h */,
+				E1EE4C45171D87F80059BEDD /* JOTravelItem.m */,
 			);
 			path = JoJoJoTravels;
 			sourceTree = "<group>";
@@ -383,6 +388,7 @@
 				E1EE4C39171D6AD90059BEDD /* AFXMLRequestOperation.m in Sources */,
 				E1EE4C3A171D6AD90059BEDD /* UIImageView+AFNetworking.m in Sources */,
 				E1EE4C3E171D77410059BEDD /* JOLastMinuteAPIClient.m in Sources */,
+				E1EE4C46171D87F80059BEDD /* JOTravelItem.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
