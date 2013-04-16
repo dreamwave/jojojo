@@ -7,12 +7,17 @@
 //
 
 #import "JOTableViewController.h"
+#import "OurTableCell.h"
 
 @interface JOTableViewController ()
 
 @end
 
 @implementation JOTableViewController
+{
+    NSArray *destinations;
+    NSArray *details;
+}
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -26,6 +31,9 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    destinations = [NSArray arrayWithObjects:@"Stockholm/Arlanda", @"Mallorca", @"Malaga", nil];
+    details = [NSArray arrayWithObjects:@"Sverige", @"Spanien", @"Spanien", nil];
 
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
@@ -57,17 +65,24 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"Cell";
-    UITableViewCell *cell = nil;//[tableView dequeueReusableCellWithIdentifier:CellIdentifier forIndexPath:indexPath];
     
-    // Configure the cell...
-    
-    if(cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:CellIdentifier];
+    OurTableCell *cell = nil;
+    if (cell == nil)
+    {
+        NSArray *nib = [[NSBundle mainBundle] loadNibNamed:@"OurTableCell" owner:self options:nil];
+        cell = [nib objectAtIndex:0];
     }
     
-    cell.textLabel.text = [NSString stringWithFormat:@"Row: %d", indexPath.row];
+    
+    cell.destination.text = [destinations objectAtIndex:indexPath.row];
+    cell.details.text = [details objectAtIndex:indexPath.row];
     
     return cell;
+}
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    return 78;
 }
 
 - (UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
@@ -85,6 +100,9 @@
 	headerLabel.text = @"Senast uppdaterad 2012-04-21 13:37"; //Todo: läsa in datan på riktigt
 	[customView addSubview:headerLabel];
     
+    //Todo:Refreshknapp
+    
+    /* Vi tittade på olika screenshots, det under hör till en annan
     UILabel * headerLeftSubLabel = [[UILabel alloc] initWithFrame:CGRectZero];
 	headerLeftSubLabel.backgroundColor = [UIColor grayColor];
 	headerLeftSubLabel.opaque = NO;
@@ -103,7 +121,7 @@
 	headerRightSubLabel.font = [UIFont boldSystemFontOfSize:10];
 	headerRightSubLabel.frame = CGRectMake(165.0, 20.0, 145.0, 18.0); //Hårdkodad centrering = bad
 	headerRightSubLabel.text = @"Från: Sverige - Stockholm"; //Todo: läsa in datan på riktigt
-	[customView addSubview:headerRightSubLabel];
+	[customView addSubview:headerRightSubLabel]; */
     
 	return customView;
 }

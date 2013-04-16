@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9433D0BB171C5D3A00ACC705 /* OurTableCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9433D0BA171C5D3A00ACC705 /* OurTableCell.xib */; };
+		9433D0BD171C5EB500ACC705 /* calendar.png in Resources */ = {isa = PBXBuildFile; fileRef = 9433D0BC171C5EB500ACC705 /* calendar.png */; };
+		9433D0BF171C5F6800ACC705 /* alert.png in Resources */ = {isa = PBXBuildFile; fileRef = 9433D0BE171C5F6800ACC705 /* alert.png */; };
+		9433D0C1171C5FB600ACC705 /* blue_arrow.png in Resources */ = {isa = PBXBuildFile; fileRef = 9433D0C0171C5FB600ACC705 /* blue_arrow.png */; };
+		9433D0C4171C615800ACC705 /* OurTableCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 9433D0C3171C615800ACC705 /* OurTableCell.m */; };
 		9441CE16171C4E38006214DC /* JOTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 9441CE15171C4E38006214DC /* JOTableViewController.m */; };
 		E1EE4B1F171C3F170059BEDD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1EE4B1E171C3F170059BEDD /* UIKit.framework */; };
 		E1EE4B21171C3F170059BEDD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E1EE4B20171C3F170059BEDD /* Foundation.framework */; };
@@ -23,6 +28,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9433D0BA171C5D3A00ACC705 /* OurTableCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OurTableCell.xib; sourceTree = "<group>"; };
+		9433D0BC171C5EB500ACC705 /* calendar.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = calendar.png; path = ../../../../Downloads/Images/calendar.png; sourceTree = "<group>"; };
+		9433D0BE171C5F6800ACC705 /* alert.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = alert.png; path = ../../../../Downloads/Images/alert.png; sourceTree = "<group>"; };
+		9433D0C0171C5FB600ACC705 /* blue_arrow.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = blue_arrow.png; path = ../../../../Downloads/Images/blue_arrow.png; sourceTree = "<group>"; };
+		9433D0C2171C615800ACC705 /* OurTableCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OurTableCell.h; sourceTree = "<group>"; };
+		9433D0C3171C615800ACC705 /* OurTableCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = OurTableCell.m; sourceTree = "<group>"; };
 		9441CE14171C4E38006214DC /* JOTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JOTableViewController.h; sourceTree = "<group>"; };
 		9441CE15171C4E38006214DC /* JOTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JOTableViewController.m; sourceTree = "<group>"; };
 		E1EE4B1B171C3F170059BEDD /* JoJoJoTravels.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JoJoJoTravels.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -97,6 +108,9 @@
 				E1EE4B25171C3F170059BEDD /* Supporting Files */,
 				9441CE14171C4E38006214DC /* JOTableViewController.h */,
 				9441CE15171C4E38006214DC /* JOTableViewController.m */,
+				9433D0BA171C5D3A00ACC705 /* OurTableCell.xib */,
+				9433D0C2171C615800ACC705 /* OurTableCell.h */,
+				9433D0C3171C615800ACC705 /* OurTableCell.m */,
 			);
 			path = JoJoJoTravels;
 			sourceTree = "<group>";
@@ -109,7 +123,10 @@
 				E1EE4B2A171C3F170059BEDD /* main.m */,
 				E1EE4B2C171C3F170059BEDD /* JoJoJoTravels-Prefix.pch */,
 				E1EE4B30171C3F170059BEDD /* Default.png */,
+				9433D0C0171C5FB600ACC705 /* blue_arrow.png */,
 				E1EE4B32171C3F170059BEDD /* Default@2x.png */,
+				9433D0BC171C5EB500ACC705 /* calendar.png */,
+				9433D0BE171C5F6800ACC705 /* alert.png */,
 				E1EE4B34171C3F170059BEDD /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
@@ -173,6 +190,10 @@
 				E1EE4B35171C3F170059BEDD /* Default-568h@2x.png in Resources */,
 				E1EE4B38171C3F170059BEDD /* MainStoryboard_iPhone.storyboard in Resources */,
 				E1EE4B3B171C3F170059BEDD /* MainStoryboard_iPad.storyboard in Resources */,
+				9433D0BB171C5D3A00ACC705 /* OurTableCell.xib in Resources */,
+				9433D0BD171C5EB500ACC705 /* calendar.png in Resources */,
+				9433D0BF171C5F6800ACC705 /* alert.png in Resources */,
+				9433D0C1171C5FB600ACC705 /* blue_arrow.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -187,6 +208,7 @@
 				E1EE4B2F171C3F170059BEDD /* JOAppDelegate.m in Sources */,
 				E1EE4B3E171C3F170059BEDD /* JOViewController.m in Sources */,
 				9441CE16171C4E38006214DC /* JOTableViewController.m in Sources */,
+				9433D0C4171C615800ACC705 /* OurTableCell.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
