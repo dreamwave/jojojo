@@ -16,8 +16,13 @@
 
 - (void)viewDidLoad
 {
+    	// Do any additional setup after loading the view, typically from a nib.
+    UIImage *background = [UIImage imageNamed: @"towel.png"];
+    UIImageView *imageView = [[UIImageView alloc] initWithImage: background];
+    
+    [self.view insertSubview: imageView atIndex:0];
+    
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
 }
 
 - (void)didReceiveMemoryWarning

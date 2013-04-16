@@ -7,6 +7,7 @@
 //
 
 #import "JOTableViewController.h"
+#import "JOViewController.h"
 #import "OurTableCell.h"
 
 @interface JOTableViewController ()
@@ -35,6 +36,10 @@
     destinations = [NSArray arrayWithObjects:@"Stockholm/Arlanda", @"Mallorca", @"Malaga", nil];
     details = [NSArray arrayWithObjects:@"Sverige", @"Spanien", @"Spanien", nil];
 
+    JOViewController *searchView = [self.storyboard instantiateViewControllerWithIdentifier:@"JOViewController"];
+    searchView.view.frame = CGRectMake(0, -330, self.navigationController.view.frame.size.width, 64);
+    [self.navigationController.view insertSubview:searchView.view atIndex:2];
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  

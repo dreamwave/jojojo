@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface JOViewController : UIViewController
-
+@property (nonatomic,strong) IBOutlet UIImage *towelImage;
 @end
