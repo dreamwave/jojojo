@@ -9,8 +9,11 @@
 #import "JOTableViewController.h"
 #import "JOViewController.h"
 #import "OurTableCell.h"
+#import "JOLastMinuteAPIClient.h"
+#import "JOTravelItem.h"
 
 @interface JOTableViewController ()
+    @property (nonatomic, strong) NSArray *itemsArray;
     @property (nonatomic, strong) NSArray *destinationArray;
     @property (nonatomic, strong) NSArray *detailArray;
     @property (nonatomic, strong) NSArray *monthArray;
@@ -56,6 +59,7 @@
     searchView.view.frame = CGRectMake(0, -330, self.navigationController.view.frame.size.width, 64);
     [self.navigationController.view insertSubview:searchView.view atIndex:2];
     
+    [self doFillThetable];
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
  
@@ -67,6 +71,39 @@
 {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)doFillThetable
+{
+    [[JOLastMinuteAPIClient sharedClient] getPath:@"/offers/from/Stockholm/Arlanda/to/Bulgarien" parameters:nil success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        NSMutableArray *tmpArr = [[NSMutableArray alloc]init];
+        
+        for (NSDictionary *dict in responseObject) {
+            JOTravelItem *item = [[JOTravelItem alloc]init];
+            
+            item.city = [dict valueForKey:@"city"];
+            
+            //NEED TO BE PARSED - "date": "2013-04-08T10:05:00.0000000+00:00"
+            //item.date = [dict valueForKey:@"date"];
+            
+            item.days = [dict valueForKey:@"days"];
+            item.departure = [dict valueForKey:@"departure"];
+            item.destination = [dict valueForKey:@"destination"];
+            item.hotelId = [dict valueForKey:@"hotellId"];
+            item.price = [dict valueForKey:@"price"];
+            item.remaining = [dict valueForKey:@"remaining"];
+            item.roomDesc = [dict valueForKey:@"roomDesc"];
+            
+            item.deptTime = @"21";
+            item.day = @"21";
+            item.month = @"Oct";
+            [tmpArr addObject:item];
+        }
+        self.itemsArray = tmpArr;
+     
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Failure ALL!");
+    }];
 }
 
 #pragma mark - Table view data source
