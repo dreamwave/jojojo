@@ -12,5 +12,13 @@
 
 @property (nonatomic, strong) IBOutlet UILabel *destination;
 @property (nonatomic, strong) IBOutlet UILabel *details;
+@property (nonatomic, strong) IBOutlet UILabel *month;
+@property (nonatomic, strong) IBOutlet UILabel *date;
+@property (nonatomic, strong) IBOutlet UILabel *duration;
+@property (nonatomic, strong) IBOutlet UILabel *origin;
+@property (nonatomic, strong) IBOutlet UILabel *deptTime;
+@property (nonatomic, strong) IBOutlet UILabel *oneRemaining;
+@property (nonatomic, strong) IBOutlet UIImageView *alert;
+@property (nonatomic, strong) IBOutlet UILabel *price;
 
 @end
