@@ -9,13 +9,15 @@
 #import "JOViewController.h"
 
 #import "JOLastMinuteAPIClient.h"
-
+@property (nonatomic, strong) NSArray *departureAirports;
 @interface JOViewController ()
     @property (nonatomic, strong) NSArray *destinationArray;
     @property (nonatomic, strong) NSArray *originArray;
 @end
 
 @implementation JOViewController
+
+NSInteger pickerRow;
 
 - (void)viewDidLoad
 {
@@ -24,6 +26,11 @@
         self.destinationArray = responseObject;
         
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+	NSMutableArray *airports = [NSMutableArray array];
+	
+	[airports addObject:[NSDictionary dictionaryWithObjectsAndKeys:@"Arlanda", @"name", @"ARN", @"code",nil]];
+	[airports addObject:[NSDictionary dictionaryWithObjectsAndKeys:@"Örebro", @"name", @"ÖRE", @"code",nil]];
+	
         NSLog(@"Failure!");
     }];
     
@@ -45,7 +52,7 @@
     // Do any additional setup after loading the view, typically from a nib.
     UIImage *background = [UIImage imageNamed: @"towel.png"];
     UIImageView *imageView = [[UIImageView alloc] initWithImage: background];
-    
+	
     [self.view insertSubview: imageView atIndex:0];
     
     [super viewDidLoad];
@@ -65,26 +72,57 @@
 // returns the # of rows in each component..
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component
 {
-	return 5;
+	//Ska vara typ arrayens storlek
+	return 6;
 }
 
 - (NSString *)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
 {
+	//Skriv ut det värdet som finns för specifik nyckel
 	return [NSString stringWithFormat:@"row: %d", row];
 }
 
 - (IBAction)PressedResmal:(id)sender
 {
 	self.currentButton = (UIButton *) sender;
-	self.picker.hidden = false;
+	self.pickerView.hidden = false;
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
 {
+	//pickerRow = row;
+	NSArray *repeatPickerData = self.picker.dataSource;
+	UIPickerView *repeatPickerView = self.picker;
 	
-	self.currentButton.titleLabel.text = [NSString stringWithFormat:@"Row: %d", row];
-	self.picker.hidden = true;
+	row = [repeatPickerView selectedRowInComponent:0];
+	NSString *data = [repeatPickerData objectAtIndex:row];
+	//self.pickerView.hidden = true;
 }
+
+- (IBAction)didPressOkButtomn:(id)sender
+{
+	/*int row = [self.picker selectedRowInComponent:0];
+	
+	
+	row = [self.picker selectedRowInComponent:0];
+	NSString *data = [repeatPickerData objectAtIndex:row];
+	[self.currentButton setTitle:[NSString stringWithFormat:@"Row: %@", [self.pickerViewArray objectAtIndex:selectedIndex]] forState:UIControlStateNormal];
+*/
+}
+
+/*
+-(void)getSelection
+{
+	NSLocale *usLocale = [[[NSLocale alloc]
+						   initWithLocaleIdentifier:@"en_US"] autorelease];
+	
+	NSDate *pickerDate = [datePicker date];
+	NSString *selectionString = [[NSString alloc]
+								 initWithFormat:@"%@",
+								 [pickerDate descriptionWithLocale:usLocale]];
+	dateLabel.text = selectionString;
+	[selectionString release];
+}*/
 
 
 @end
